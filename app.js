@@ -205,7 +205,7 @@ function renderContact(){
   body.innerHTML=`
     <div class="q">
       <label class="title">Receba seu Diagnóstico Preliminar Conexão Circular</label>
-      <p class="helper">Deixe seu e-mail ou WhatsApp para receber gratuitamente uma leitura do seu perfil, com pontos fortes, oportunidades de evolução e possíveis conexões circulares. O contato é opcional e você pode concluir sem preencher.</p>
+      <p class="helper">Deixe seu e-mail ou WhatsApp para receber gratuitamente uma leitura preliminar do seu perfil, com pontos fortes, oportunidades de evolução e possíveis conexões circulares. O contato é opcional e não condiciona sua participação na pesquisa.</p>
       <div class="contact-grid">
         <input class="field" id="contact_name" placeholder="Nome">
         <input class="field" id="contact_company" placeholder="Empresa / organização">
@@ -219,7 +219,7 @@ function renderContact(){
         </select>
       </div>
       <br>
-      <label class="option"><input id="contact_allowed" type="checkbox"> <span>Se eu deixar contato, autorizo seu uso para envio do diagnóstico preliminar, resultados da pesquisa e informações sobre o piloto Conexão Circular.</span></label>
+      <label class="option"><input id="contact_allowed" type="checkbox"> <span>Se eu deixar contato, autorizo seu uso para envio do diagnóstico preliminar, resultados da pesquisa e comunicações sobre eventual convite para o piloto Conexão Circular.</span></label>
     </div>`;
 }
 
