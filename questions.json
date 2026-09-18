@@ -4,11 +4,11 @@
     "subtitle": "Validação econômica, operacional e de impacto.",
     "questions": [
       {"key":"municipality","label":"Em qual município sua organização atua principalmente?","type":"text","required":true},
-      {"key":"organization_type","label":"Qual opção melhor descreve sua organização?","type":"radio","required":true,"options":["Hotel/pousada","Restaurante/bar/café","Mercado/varejo","Empresa de turismo","Evento/cultura","Outra empresa"]},
-      {"key":"main_challenge","label":"Nos últimos 90 dias, qual foi o maior desafio em relação à economia circular e à sustentabilidade?","type":"radio","required":true,"options":["Encontrar fornecedor local","Encontrar prestador confiável","Coleta/destinação","Rastreabilidade/comprovação","Preço/custo","Falta de informação próxima","Outro"]},
-      {"key":"search_time","label":"Quanto tempo sua equipe costuma gastar para encontrar e validar fornecedores ou soluções?","type":"radio","required":true,"options":["Menos de 1h/mês","1–3h/mês","4–8h/mês","9–20h/mês","Mais de 20h/mês","Não sei"]},
-      {"key":"desired_solutions","label":"Quais soluções você teria interesse em encontrar por localização?","type":"checkbox","required":true,"options":["Produtores locais","Artistas/artesãos","Prestadores de serviços","Cooperativas","Compostagem","Reciclagem","Logística reversa","Experiências turísticas"]},
-      {"key":"main_value","label":"Qual seria o maior valor de uma plataforma territorial para sua organização?","type":"radio","required":true,"options":["Reduzir custos","Ganhar agilidade","Encontrar fornecedores confiáveis","Comprovar impacto/ESG","Gerar renda local","Apoiar turismo sustentável","Outro"]},
+      {"key":"organization_type","label":"Qual opção melhor descreve sua organização?","type":"radio","required":true,"options":["Hotel / pousada","Restaurante / bar / café","Mercado / varejo","Empresa de turismo","Evento / cultura","Outra empresa"]},
+      {"key":"main_challenge","label":"Nos últimos 90 dias, qual foi o maior desafio em relação à economia circular e à sustentabilidade?","type":"radio","required":true,"options":["Encontrar fornecedor local","Encontrar prestador confiável","Coleta / destinação","Rastreabilidade / comprovação","Preço / custo","Falta de informação próxima","Outro"]},
+      {"key":"search_time","label":"Quanto tempo sua equipe costuma gastar para encontrar e validar fornecedores ou soluções?","type":"radio","required":true,"options":["Menos de 1h / mês","1–3h / mês","4–8h / mês","9–20h / mês","Mais de 20h / mês","Não sei"]},
+      {"key":"desired_solutions","label":"Quais soluções você teria interesse em encontrar por localização?","type":"checkbox","required":true,"options":["Produtores locais","Artistas / artesãos","Prestadores de serviços","Cooperativas","Compostagem","Reciclagem","Logística reversa","Experiências turísticas"]},
+      {"key":"main_value","label":"Qual seria o maior valor de uma plataforma territorial para sua organização?","type":"radio","required":true,"options":["Reduzir custos","Ganhar agilidade","Encontrar fornecedores confiáveis","Comprovar impacto / ESG","Gerar renda local","Apoiar turismo sustentável","Outro"]},
       {"key":"payment_model","label":"Se resolvesse esse problema, qual modelo faria mais sentido?","type":"radio","required":false,"options":["Assinatura mensal","Taxa por contratação","Comissão por transação","Pacote corporativo","Não pagaria","Ainda não sei"]},
       {"key":"pilot_interest","label":"Participaria de um piloto de 90 dias?","type":"radio","required":true,"options":["Sim","Talvez","Não"]}
     ]
@@ -21,7 +21,7 @@
       {"key":"area","label":"Qual área representa melhor sua atuação?","type":"radio","required":true,"options":["Turismo","Desenvolvimento econômico","Meio ambiente","Cultura","Planejamento","Inovação","Outra"]},
       {"key":"main_gap","label":"Qual é hoje a maior dificuldade para enxergar e conectar atores do território?","type":"radio","required":true,"options":["Dados dispersos","Cadastros desatualizados","Pouca geolocalização","Baixa integração entre áreas","Dificuldade de acompanhar impacto","Baixa conexão com empresas","Outro"]},
       {"key":"decision_data","label":"Qual decisão pública seria melhor com dados territoriais mais organizados?","type":"textarea","required":true},
-      {"key":"indicators","label":"Quais indicadores seriam mais úteis?","type":"checkbox","required":true,"options":["Negócios locais","Geração de renda","Fluxos de resíduos","Fornecedores locais","Cooperativas/operadores","Turismo sustentável","Empregos/oportunidades","Práticas circulares"]},
+      {"key":"indicators","label":"Quais indicadores seriam mais úteis?","type":"checkbox","required":true,"options":["Negócios locais","Geração de renda","Fluxos de resíduos","Fornecedores locais","Cooperativas / operadores","Turismo sustentável","Empregos / oportunidades","Práticas circulares"]},
       {"key":"preferred_format","label":"Qual formato teria maior valor para sua gestão?","type":"radio","required":true,"options":["Mapa territorial","Painel de indicadores","Relatório periódico","Base georreferenciada","Programa de conexão de negócios","Outro"]},
       {"key":"pilot_interest","label":"Há interesse em testar um piloto territorial?","type":"radio","required":true,"options":["Sim","Talvez","Não"]}
     ]
@@ -31,10 +31,10 @@
     "subtitle": "Mercado, recorrência e conexão B2B.",
     "questions": [
       {"key":"municipality","label":"Em qual município atua principalmente?","type":"text","required":true},
-      {"key":"activity","label":"Qual opção melhor descreve sua atividade?","type":"radio","required":true,"options":["Alimentos","Bebidas","Moda/confecção","Produtos sustentáveis","Agricultura/produção local","Turismo/experiências","Tecnologia/cleantech","Outro"]},
-      {"key":"sales_barrier","label":"Qual foi sua maior dificuldade comercial nos últimos 90 dias?","type":"radio","required":true,"options":["Pouca visibilidade","Poucos clientes novos","Falta de compradores recorrentes","Logística","Preço/margem","Falta de contatos B2B","Outro"]},
+      {"key":"activity","label":"Qual opção melhor descreve sua atividade?","type":"radio","required":true,"options":["Alimentos","Bebidas","Moda / confecção","Produtos sustentáveis","Agricultura / produção local","Turismo / experiências","Tecnologia / cleantech","Outro"]},
+      {"key":"sales_barrier","label":"Qual foi sua maior dificuldade comercial nos últimos 90 dias?","type":"radio","required":true,"options":["Pouca visibilidade","Poucos clientes novos","Falta de compradores recorrentes","Logística","Preço / margem","Falta de contatos B2B","Outro"]},
       {"key":"b2b_sales","label":"Hoje você vende para hotéis, restaurantes ou empresas?","type":"radio","required":true,"options":["Sim, com frequência","Às vezes","Ainda não, mas quero","Não tenho interesse"]},
-      {"key":"circular_practices","label":"Quais práticas circulares fazem parte do negócio?","type":"checkbox","required":false,"options":["Redução de resíduos","Reuso/reparo","Reciclagem","Compostagem","Embalagem de menor impacto","Matéria-prima local/recuperada","Produção sob demanda","Logística reversa"]},
+      {"key":"circular_practices","label":"Quais práticas circulares fazem parte do negócio?","type":"checkbox","required":false,"options":["Redução de resíduos","Reuso / reparo","Reciclagem","Compostagem","Embalagem de menor impacto","Matéria-prima local / recuperada","Produção sob demanda","Logística reversa"]},
       {"key":"payment_model","label":"Se a plataforma gerar uma venda confirmada, qual modelo parece mais aceitável?","type":"radio","required":false,"options":["Comissão por venda","Assinatura mensal","Plano gratuito + recursos pagos","Não pagaria","Ainda não sei"]},
       {"key":"pilot_interest","label":"Participaria de um piloto de 90 dias?","type":"radio","required":true,"options":["Sim","Talvez","Não"]}
     ]
@@ -44,9 +44,9 @@
     "subtitle": "Visibilidade, venda, contratação e novos públicos.",
     "questions": [
       {"key":"municipality","label":"Em qual município atua principalmente?","type":"text","required":true},
-      {"key":"activity","label":"Como você se identifica profissionalmente?","type":"radio","required":true,"options":["Artista visual","Artesão(ã)","Designer","Moda/autoral","Música/performance","Cultura/produção","Outro"]},
-      {"key":"main_barrier","label":"Qual foi sua maior dificuldade nos últimos 90 dias?","type":"radio","required":true,"options":["Pouca visibilidade","Poucas vendas","Poucas contratações","Falta de espaços","Dificuldade de chegar a hotéis/restaurantes","Precificação","Outro"]},
-      {"key":"opportunities","label":"Que oportunidades mais interessam?","type":"checkbox","required":true,"options":["Venda em hotéis/pousadas","Decoração/compras corporativas","Eventos","Experiências para turistas","Oficinas","Lojas locais","Parcerias com restaurantes"]},
+      {"key":"activity","label":"Como você se identifica profissionalmente?","type":"radio","required":true,"options":["Artista visual","Artesão(ã)","Designer","Moda / autoral","Música / performance","Cultura / produção","Outro"]},
+      {"key":"main_barrier","label":"Qual foi sua maior dificuldade nos últimos 90 dias?","type":"radio","required":true,"options":["Pouca visibilidade","Poucas vendas","Poucas contratações","Falta de espaços","Dificuldade de chegar a hotéis / restaurantes","Precificação","Outro"]},
+      {"key":"opportunities","label":"Que oportunidades mais interessam?","type":"checkbox","required":true,"options":["Venda em hotéis / pousadas","Decoração / compras corporativas","Eventos","Experiências para turistas","Oficinas","Lojas locais","Parcerias com restaurantes"]},
       {"key":"circular_practices","label":"Seu trabalho utiliza materiais locais, reaproveitados ou práticas de menor impacto?","type":"radio","required":false,"options":["Sim","Em parte","Ainda não"]},
       {"key":"payment_model","label":"Aceitaria comissão sobre venda ou contratação gerada pela plataforma?","type":"radio","required":false,"options":["Sim","Depende do percentual","Prefiro assinatura","Não","Ainda não sei"]},
       {"key":"pilot_interest","label":"Participaria de um piloto de 90 dias?","type":"radio","required":true,"options":["Sim","Talvez","Não"]}
@@ -57,8 +57,8 @@
     "subtitle": "Demanda, contratação e oportunidades territoriais.",
     "questions": [
       {"key":"municipality","label":"Em qual município atua principalmente?","type":"text","required":true},
-      {"key":"service_type","label":"Que tipo de serviço presta?","type":"checkbox","required":true,"options":["Guia/turismo","Manutenção/reparo","Logística","Comunicação/design","Tecnologia","Eventos","Consultoria","Serviços ambientais","Outro"]},
-      {"key":"main_barrier","label":"Qual foi sua principal dificuldade comercial nos últimos 90 dias?","type":"radio","required":true,"options":["Poucos clientes","Baixa recorrência","Pouca visibilidade","Falta de indicação","Dificuldade de chegar a empresas","Preço","Deslocamento/logística","Outro"]},
+      {"key":"service_type","label":"Que tipo de serviço presta?","type":"checkbox","required":true,"options":["Guia / turismo","Manutenção / reparo","Logística","Comunicação / design","Tecnologia","Eventos","Consultoria","Serviços ambientais","Outro"]},
+      {"key":"main_barrier","label":"Qual foi sua principal dificuldade comercial nos últimos 90 dias?","type":"radio","required":true,"options":["Poucos clientes","Baixa recorrência","Pouca visibilidade","Falta de indicação","Dificuldade de chegar a empresas","Preço","Deslocamento / logística","Outro"]},
       {"key":"desired_connections","label":"Que tipo de conexão seria mais valiosa?","type":"checkbox","required":true,"options":["Hotéis","Restaurantes","Empresas","Eventos","Turistas","Poder público","Produtores locais"]},
       {"key":"capacity","label":"Hoje você tem capacidade para atender novos clientes?","type":"radio","required":true,"options":["Sim, imediatamente","Sim, com limite","Depende do serviço","Não no momento"]},
       {"key":"payment_model","label":"Aceitaria comissão sobre contratação gerada pela plataforma?","type":"radio","required":false,"options":["Sim","Depende do percentual","Prefiro assinatura","Não","Ainda não sei"]},
@@ -70,9 +70,9 @@
     "subtitle": "Capacidade, demanda, rastreabilidade e conexão com empresas.",
     "questions": [
       {"key":"municipality","label":"Em qual município atua principalmente?","type":"text","required":true},
-      {"key":"service_type","label":"Qual serviço oferece?","type":"checkbox","required":true,"options":["Coleta seletiva","Reciclagem","Compostagem","Óleo usado","Vidro","Eletrônicos","Logística reversa","Reuso/reparo","Outro"]},
+      {"key":"service_type","label":"Qual serviço oferece?","type":"checkbox","required":true,"options":["Coleta seletiva","Reciclagem","Compostagem","Óleo usado","Vidro","Eletrônicos","Logística reversa","Reuso / reparo","Outro"]},
       {"key":"main_bottleneck","label":"Qual é hoje o principal gargalo?","type":"radio","required":true,"options":["Baixo volume","Volume irregular","Rotas ineficientes","Poucos clientes recorrentes","Preço","Infraestrutura","Falta de dados","Outro"]},
-      {"key":"capacity","label":"Hoje existe capacidade para atender mais empresas?","type":"radio","required":true,"options":["Sim, bastante","Sim, limitada","Depende do material/rota","Não no momento"]},
+      {"key":"capacity","label":"Hoje existe capacidade para atender mais empresas?","type":"radio","required":true,"options":["Sim, bastante","Sim, limitada","Depende do material / rota","Não no momento"]},
       {"key":"evidence","label":"Você consegue fornecer comprovante ou evidência de destinação?","type":"radio","required":true,"options":["Sim","Em alguns casos","Ainda não"]},
       {"key":"b2b_interest","label":"Tem interesse em atender mais hotéis, restaurantes e empresas?","type":"radio","required":true,"options":["Sim","Talvez","Já atendo","Não"]},
       {"key":"pilot_interest","label":"Participaria de um piloto de 90 dias?","type":"radio","required":true,"options":["Sim","Talvez","Não"]}
@@ -83,9 +83,9 @@
     "subtitle": "Descoberta de opções locais e confiança.",
     "questions": [
       {"key":"municipality","label":"Em qual município você mora ou está visitando?","type":"text","required":true},
-      {"key":"recent_search","label":"Nos últimos 30 dias, o que você buscou no território?","type":"checkbox","required":true,"options":["Produto local","Artesanato/arte","Restaurante/café","Experiência turística","Serviço local","Ponto de coleta","Produto sustentável"]},
-      {"key":"main_barrier","label":"Qual foi a principal dificuldade?","type":"radio","required":true,"options":["Não encontrei perto","Não sabia em quem confiar","Preço","Falta de informação","Horário/contato desatualizado","Não tive dificuldade","Outro"]},
-      {"key":"what_helps","label":"O que mais ajudaria?","type":"checkbox","required":true,"options":["Mapa por proximidade","Avaliações","Selo/curadoria","Benefícios","Contato atualizado","Fotos/evidências"]},
+      {"key":"recent_search","label":"Nos últimos 30 dias, o que você buscou no território?","type":"checkbox","required":true,"options":["Produto local","Artesanato / arte","Restaurante / café","Experiência turística","Serviço local","Ponto de coleta","Produto sustentável"]},
+      {"key":"main_barrier","label":"Qual foi a principal dificuldade?","type":"radio","required":true,"options":["Não encontrei perto","Não sabia em quem confiar","Preço","Falta de informação","Horário / contato desatualizado","Não tive dificuldade","Outro"]},
+      {"key":"what_helps","label":"O que mais ajudaria?","type":"checkbox","required":true,"options":["Mapa por proximidade","Avaliações","Selo / curadoria","Benefícios","Contato atualizado","Fotos / evidências"]},
       {"key":"pilot_interest","label":"Participaria de um piloto para encontrar opções próximas?","type":"radio","required":true,"options":["Sim","Talvez","Não"]}
     ]
   }
