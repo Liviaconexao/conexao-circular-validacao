@@ -17,7 +17,7 @@ fetch('questions.json')
     toast('Não foi possível carregar a pesquisa. Atualize a página e tente novamente.');
   });
 
-document.querySelectorAll('[data-scroll]').forEach(b=>b.addEventListener('click',()=>document.querySelector(b.dataset.scroll)?.scrollIntoView({behavior:'smooth'})));
+document.querySelectorAll('[data-scroll]').forEach(b=>{const go=()=>document.querySelector(b.dataset.scroll)?.scrollIntoView({behavior:'smooth'});b.addEventListener('click',go);b.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});});
 document.querySelectorAll('[data-profile]').forEach(b=>b.addEventListener('click',()=>openSurvey(b.dataset.profile)));
 document.querySelector('.close').addEventListener('click',()=>modal.hidden=true);
 backBtn.addEventListener('click',goBack);
@@ -239,7 +239,7 @@ function captureContact(){
     toast('Informe pelo menos e-mail ou WhatsApp.');
     return {ok:false,hasContact:true};
   }
-  if(email&&!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){
+  if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
     toast('Informe um e-mail válido.');
     return {ok:false,hasContact:true};
   }
