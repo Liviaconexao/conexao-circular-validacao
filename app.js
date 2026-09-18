@@ -66,11 +66,11 @@ function renderConsent(){
     <div class="q">
       <label class="title">Antes de começar</label>
       <div class="consent-box">
-        Esta pesquisa tem dois objetivos: validar problemas reais de conexão no território e construir uma linha de base sobre práticas circulares, compras inclusivas e indicadores de impacto.
+        Esta pesquisa tem dois objetivos: validar problemas reais de conexão no território e construir uma linha de base sobre práticas circulares, compras inclusivas e indicadores de impacto. As respostas também ajudam a compor um diagnóstico preliminar de maturidade em circularidade e impacto, de acordo com o perfil do participante.
         <br><br>
         As respostas serão analisadas de forma agregada. Nesta etapa, os dados representam informações declaradas pelos participantes e não serão tratados como impacto comprovado sem acompanhamento posterior.
         <br><br>
-        Não pedimos endereço exato. O contato ao final é opcional.
+        Não pedimos endereço exato. O contato ao final é opcional. O diagnóstico é baseado nas informações declaradas pelo participante e não constitui certificação, auditoria ou comprovação independente de impacto.
         <br><br>
         <label class="option"><input id="consent" type="checkbox"> <span>Li as informações acima e concordo voluntariamente em participar.</span></label>
       </div>
@@ -199,8 +199,8 @@ function renderContact(){
 
   body.innerHTML=`
     <div class="q">
-      <label class="title">Quer receber os resultados ou participar do piloto?</label>
-      <p class="helper">Este passo é opcional. Se preferir, deixe os campos vazios e conclua a pesquisa.</p>
+      <label class="title">Quer receber seu Diagnóstico Preliminar Conexão Circular?</label>
+      <p class="helper">Deixe seu e-mail ou WhatsApp para receber um retorno com seus principais sinais de circularidade e impacto, pontos fortes, oportunidades de evolução e possíveis conexões circulares. Este passo é opcional.</p>
       <div class="contact-grid">
         <input class="field" id="contact_name" placeholder="Nome">
         <input class="field" id="contact_company" placeholder="Empresa / organização">
@@ -214,7 +214,7 @@ function renderContact(){
         </select>
       </div>
       <br>
-      <label class="option"><input id="contact_allowed" type="checkbox"> <span>Se eu deixar contato, autorizo seu uso para envio dos resultados e informações sobre o piloto Conexão Circular.</span></label>
+      <label class="option"><input id="contact_allowed" type="checkbox"> <span>Se eu deixar contato, autorizo seu uso para envio do diagnóstico preliminar, resultados da pesquisa e informações sobre o piloto Conexão Circular.</span></label>
     </div>`;
 }
 
@@ -272,7 +272,12 @@ function renderSuccess(emailSent,hasContact){
       <div class="big">✓</div>
       <h3>Resposta registrada.</h3>
       <p>Obrigada por contribuir com o Diagnóstico Conexão Circular.</p>
-      <p>${hasContact?(emailSent?'Enviamos um e-mail de confirmação para você.':'Seu contato foi registrado.'): 'Sua resposta foi registrada sem dados de contato.'}</p>
+      <p>${hasContact?(emailSent?'Enviamos um e-mail de confirmação. Seu contato ficou registrado para o diagnóstico preliminar.':'Seu contato foi registrado para o diagnóstico preliminar.'): 'Sua resposta foi registrada sem dados de contato.'}</p>
+
+      <div class="consent-box" style="text-align:left;margin-top:18px">
+        <strong>Da pontuação para a conexão.</strong>
+        <p>O diagnóstico não termina em uma nota. Quando houver aderência, o Conexão Circular poderá indicar uma oportunidade de melhoria, o tipo de ator que pode ajudar, uma conexão circular possível e um indicador para acompanhar a evolução.</p>
+      </div>
 
       <div class="consent-box" style="text-align:left;margin-top:18px">
         <strong>Ajude a ampliar esta escuta.</strong>
