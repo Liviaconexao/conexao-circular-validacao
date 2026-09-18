@@ -1,3 +1,4 @@
+// Preview QA — diagnóstico preliminar ICC
 const endpoint=window.SURVEY_ENDPOINT;
 let schema=null,currentProfile=null,currentIndex=-1,sessionId=null,answers={},contact={},schemaLoadFailed=false;
 const modal=document.getElementById('surveyModal'),body=document.getElementById('surveyBody'),titleEl=document.getElementById('surveyTitle'),subtitleEl=document.getElementById('surveySubtitle'),progress=document.getElementById('progressBar'),backBtn=document.getElementById('backBtn'),nextBtn=document.getElementById('nextBtn');
