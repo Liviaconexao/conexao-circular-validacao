@@ -1,8 +1,22 @@
 const endpoint=window.SURVEY_ENDPOINT;
-let schema=null,currentProfile=null,currentIndex=-1,sessionId=null,answers={},contact={};
+let schema=null,currentProfile=null,currentIndex=-1,sessionId=null,answers={},contact={},schemaLoadFailed=false;
 const modal=document.getElementById('surveyModal'),body=document.getElementById('surveyBody'),titleEl=document.getElementById('surveyTitle'),subtitleEl=document.getElementById('surveySubtitle'),progress=document.getElementById('progressBar'),backBtn=document.getElementById('backBtn'),nextBtn=document.getElementById('nextBtn');
 
-fetch('questions.json').then(r=>r.json()).then(j=>schema=j);
+fetch('questions.json')
+  .then(r=>{
+    if(!r.ok)throw new Error('Não foi possível carregar questions.json');
+    return r.json();
+  })
+  .then(j=>{
+    schema=j;
+    schemaLoadFailed=false;
+  })
+  .catch(err=>{
+    console.error('questions_load_error',err);
+    schemaLoadFailed=true;
+    toast('Não foi possível carregar a pesquisa. Atualize a página e tente novamente.');
+  });
+
 document.querySelectorAll('[data-scroll]').forEach(b=>b.addEventListener('click',()=>document.querySelector(b.dataset.scroll)?.scrollIntoView({behavior:'smooth'})));
 document.querySelectorAll('[data-profile]').forEach(b=>b.addEventListener('click',()=>openSurvey(b.dataset.profile)));
 document.querySelector('.close').addEventListener('click',()=>modal.hidden=true);
@@ -15,6 +29,12 @@ async function api(payload){
   return res.json();
 }
 
+function trackEvent(eventName,eventData={}){
+  if(!sessionId)return;
+  api({action:'event',session_id:sessionId,event_name:eventName,event_data:eventData})
+    .catch(err=>console.warn('analytics_event_error',eventName,err));
+}
+
 function toast(msg){
   const t=document.getElementById('toast');
   t.textContent=msg;
@@ -23,7 +43,9 @@ function toast(msg){
 }
 
 function openSurvey(profile){
+  if(schemaLoadFailed)return toast('A pesquisa não carregou corretamente. Atualize a página e tente novamente.');
   if(!schema)return toast('Carregando pesquisa…');
+  if(!schema[profile])return toast('Perfil de pesquisa indisponível.');
   currentProfile=profile;
   currentIndex=-1;
   sessionId=null;
@@ -70,6 +92,8 @@ async function goNext(){
         user_agent:navigator.userAgent
       });
       sessionId=d.session_id;
+      trackEvent('profile_selected',{profile:currentProfile});
+      trackEvent('survey_started',{profile:currentProfile});
       currentIndex=0;
       backBtn.style.visibility='visible';
       renderQuestion();
@@ -97,6 +121,11 @@ async function goNext(){
         emailSent=Boolean(result.confirmation_email_sent);
       }
       await api({action:'complete',session_id:sessionId,contact_allowed:contactState.hasContact});
+      trackEvent('survey_completed',{
+        profile:currentProfile,
+        contact_provided:contactState.hasContact,
+        pilot_interest:answers.pilot_interest||null
+      });
       renderSuccess(emailSent,contactState.hasContact);
     }
   }catch(e){
@@ -210,7 +239,7 @@ function captureContact(){
     toast('Informe pelo menos e-mail ou WhatsApp.');
     return {ok:false,hasContact:true};
   }
-  if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+  if(email&&!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){
     toast('Informe um e-mail válido.');
     return {ok:false,hasContact:true};
   }
