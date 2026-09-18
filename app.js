@@ -67,11 +67,15 @@ function renderConsent(){
     <div class="q">
       <label class="title">Antes de começar</label>
       <div class="consent-box">
-        Esta pesquisa tem dois objetivos: validar problemas reais de conexão no território e construir uma linha de base sobre práticas circulares, compras inclusivas e indicadores de impacto. As respostas também ajudam a compor um diagnóstico preliminar de maturidade em circularidade e impacto, de acordo com o perfil do participante.
+        <strong>Responda à pesquisa e conheça melhor suas práticas de circularidade e impacto.</strong>
+        <br><br>
+        Ao final, você poderá deixar seu contato para receber gratuitamente um <strong>Diagnóstico Preliminar Conexão Circular</strong>, com uma leitura do seu perfil, pontos fortes, oportunidades de evolução e possíveis conexões circulares que podem ajudar você ou sua organização a avançar.
+        <br><br>
+        Enquanto isso, suas respostas também nos ajudam a identificar problemas reais de conexão no território e construir uma linha de base sobre práticas circulares, compras inclusivas e indicadores de impacto.
         <br><br>
         As respostas serão analisadas de forma agregada. Nesta etapa, os dados representam informações declaradas pelos participantes e não serão tratados como impacto comprovado sem acompanhamento posterior.
         <br><br>
-        Não pedimos endereço exato. O contato ao final é opcional. O diagnóstico é baseado nas informações declaradas pelo participante e não constitui certificação, auditoria ou comprovação independente de impacto.
+        Não pedimos endereço exato. O contato ao final é opcional. O diagnóstico é preliminar, baseado nas informações declaradas pelo participante e não constitui certificação, auditoria ou comprovação independente de impacto.
         <br><br>
         <label class="option"><input id="consent" type="checkbox"> <span>Li as informações acima e concordo voluntariamente em participar.</span></label>
       </div>
@@ -200,8 +204,8 @@ function renderContact(){
 
   body.innerHTML=`
     <div class="q">
-      <label class="title">Quer receber seu Diagnóstico Preliminar Conexão Circular?</label>
-      <p class="helper">Deixe seu e-mail ou WhatsApp para receber um retorno com seus principais sinais de circularidade e impacto, pontos fortes, oportunidades de evolução e possíveis conexões circulares. Este passo é opcional.</p>
+      <label class="title">Receba seu Diagnóstico Preliminar Conexão Circular</label>
+      <p class="helper">Deixe seu e-mail ou WhatsApp para receber gratuitamente uma leitura do seu perfil, com pontos fortes, oportunidades de evolução e possíveis conexões circulares. O contato é opcional e você pode concluir sem preencher.</p>
       <div class="contact-grid">
         <input class="field" id="contact_name" placeholder="Nome">
         <input class="field" id="contact_company" placeholder="Empresa / organização">
@@ -272,12 +276,12 @@ function renderSuccess(emailSent,hasContact){
     <div class="success">
       <div class="big">✓</div>
       <h3>Resposta registrada.</h3>
-      <p>Obrigada por contribuir com o Diagnóstico Conexão Circular.</p>
+      <p>Obrigada por participar do Diagnóstico Conexão Circular.</p>
       <p>${hasContact?(emailSent?'Enviamos um e-mail de confirmação. Seu contato ficou registrado para o diagnóstico preliminar.':'Seu contato foi registrado para o diagnóstico preliminar.'): 'Sua resposta foi registrada sem dados de contato.'}</p>
 
       <div class="consent-box" style="text-align:left;margin-top:18px">
-        <strong>Da pontuação para a conexão.</strong>
-        <p>O diagnóstico não termina em uma nota. Quando houver aderência, o Conexão Circular poderá indicar uma oportunidade de melhoria, o tipo de ator que pode ajudar, uma conexão circular possível e um indicador para acompanhar a evolução.</p>
+        <strong>O diagnóstico é um ponto de partida.</strong>
+        <p>Quando houver aderência, o Conexão Circular poderá transformar a oportunidade identificada em uma conexão possível: quem pode ajudar, qual ação pode ser testada e qual indicador pode acompanhar a evolução.</p>
       </div>
 
       <div class="consent-box" style="text-align:left;margin-top:18px">
