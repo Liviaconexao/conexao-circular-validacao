@@ -144,6 +144,22 @@
         ]
       },
       {
+        "key": "connection_interest",
+        "label": "Qual conexão faria mais sentido para sua organização agora?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Encontrar fornecedores locais / sustentáveis",
+          "Participar de compras coletivas de insumos sustentáveis",
+          "Encontrar solução para resíduos recicláveis",
+          "Encontrar solução para resíduos orgânicos / compostagem",
+          "Comprar de cooperativas / empreendimentos da Economia Solidária",
+          "Melhorar práticas de circularidade / evoluir no ICC",
+          "Conhecer benefícios, parceiros e oportunidades da rede",
+          "Outro"
+        ]
+      },
+      {
         "key": "pilot_interest",
         "label": "Você teria interesse em testar uma solução que conecte oferta e demanda sustentável no território e gere indicadores dessas conexões?",
         "type": "radio",
@@ -153,6 +169,23 @@
           "Talvez",
           "Não"
         ]
+      },
+      {
+        "key": "referral_interest",
+        "label": "Você conhece algum negócio, cooperativa, produtor, artesão ou iniciativa sustentável que deveria fazer parte do nosso mapeamento?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Sim, quero indicar",
+          "Talvez depois",
+          "Não agora"
+        ]
+      },
+      {
+        "key": "referral_details",
+        "label": "Se quiser indicar, informe nome do negócio ou iniciativa e, se souber, Instagram/site, município/bairro ou contato.",
+        "type": "textarea",
+        "required": false
       }
     ]
   },
@@ -292,6 +325,23 @@
         ]
       },
       {
+        "key": "solidarity_link",
+        "label": "Seu empreendimento está cadastrado no Cadsol ou faz parte de algum coletivo da Economia Solidária ou do Fórum de Economia Solidária de Niterói?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Está cadastrado no Cadsol",
+          "Participa do Fórum de Economia Solidária de Niterói (FES-Nit)",
+          "Participa de outro coletivo, fórum ou rede de Economia Solidária",
+          "Faz parte de cooperativa",
+          "Faz parte de associação produtiva",
+          "Faz parte de grupo ou coletivo produtivo",
+          "Atua com Economia Solidária, mas ainda não possui cadastro formal",
+          "Não participa",
+          "Não sei informar"
+        ]
+      },
+      {
         "key": "impact_orientation",
         "label": "Seu negócio busca gerar, além de resultado econômico, algum benefício social, ambiental ou territorial?",
         "type": "radio",
@@ -394,6 +444,23 @@
         ]
       },
       {
+        "key": "connection_interest",
+        "label": "Qual conexão faria mais sentido para você agora?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Encontrar compradores / clientes",
+          "Encontrar fornecedores sustentáveis",
+          "Participar de compras coletivas (ex.: embalagens e insumos sustentáveis)",
+          "Encontrar soluções de coleta, reciclagem ou compostagem",
+          "Melhorar práticas de circularidade / evoluir no ICC",
+          "Divulgar produtos ou serviços no mapa / Lugar de Mercado",
+          "Conhecer o Programa Agente Multiplicador Circular",
+          "Conhecer benefícios, parceiros e oportunidades da rede",
+          "Outro"
+        ]
+      },
+      {
         "key": "pilot_interest",
         "label": "Você teria interesse em testar uma solução que conecte seu negócio a compradores e gere indicadores dessas conexões?",
         "type": "radio",
@@ -403,6 +470,23 @@
           "Talvez",
           "Não"
         ]
+      },
+      {
+        "key": "referral_interest",
+        "label": "Você conhece algum negócio, cooperativa, produtor, artesão ou iniciativa sustentável que deveria fazer parte do nosso mapeamento?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Sim, quero indicar",
+          "Talvez depois",
+          "Não agora"
+        ]
+      },
+      {
+        "key": "referral_details",
+        "label": "Se quiser indicar, informe nome do negócio ou iniciativa e, se souber, Instagram/site, município/bairro ou contato.",
+        "type": "textarea",
+        "required": false
       }
     ]
   },
@@ -429,6 +513,23 @@
           "Música / performance",
           "Cultura / produção",
           "Outro"
+        ]
+      },
+      {
+        "key": "solidarity_link",
+        "label": "Seu empreendimento está cadastrado no Cadsol ou faz parte de algum coletivo da Economia Solidária ou do Fórum de Economia Solidária de Niterói?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Está cadastrado no Cadsol",
+          "Participa do Fórum de Economia Solidária de Niterói (FES-Nit)",
+          "Participa de outro coletivo, fórum ou rede de Economia Solidária",
+          "Faz parte de cooperativa",
+          "Faz parte de associação produtiva",
+          "Faz parte de grupo ou coletivo produtivo",
+          "Atua com Economia Solidária, mas ainda não possui cadastro formal",
+          "Não participa",
+          "Não sei informar"
         ]
       },
       {
@@ -517,6 +618,23 @@
         ]
       },
       {
+        "key": "connection_interest",
+        "label": "Qual conexão faria mais sentido para você agora?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Encontrar compradores / clientes",
+          "Encontrar fornecedores sustentáveis",
+          "Participar de compras coletivas (ex.: embalagens e insumos sustentáveis)",
+          "Encontrar soluções de coleta, reciclagem ou compostagem",
+          "Melhorar práticas de circularidade / evoluir no ICC",
+          "Divulgar produtos ou serviços no mapa / Lugar de Mercado",
+          "Conhecer o Programa Agente Multiplicador Circular",
+          "Conhecer benefícios, parceiros e oportunidades da rede",
+          "Outro"
+        ]
+      },
+      {
         "key": "pilot_interest",
         "label": "Você teria interesse em testar uma solução de conexão com compradores e oportunidades locais?",
         "type": "radio",
@@ -526,6 +644,23 @@
           "Talvez",
           "Não"
         ]
+      },
+      {
+        "key": "referral_interest",
+        "label": "Você conhece algum negócio, cooperativa, produtor, artesão ou iniciativa sustentável que deveria fazer parte do nosso mapeamento?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Sim, quero indicar",
+          "Talvez depois",
+          "Não agora"
+        ]
+      },
+      {
+        "key": "referral_details",
+        "label": "Se quiser indicar, informe nome do negócio ou iniciativa e, se souber, Instagram/site, município/bairro ou contato.",
+        "type": "textarea",
+        "required": false
       }
     ]
   },
@@ -554,6 +689,23 @@
           "Consultoria",
           "Serviços ambientais",
           "Outro"
+        ]
+      },
+      {
+        "key": "solidarity_link",
+        "label": "Seu empreendimento está cadastrado no Cadsol ou faz parte de algum coletivo da Economia Solidária ou do Fórum de Economia Solidária de Niterói?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Está cadastrado no Cadsol",
+          "Participa do Fórum de Economia Solidária de Niterói (FES-Nit)",
+          "Participa de outro coletivo, fórum ou rede de Economia Solidária",
+          "Faz parte de cooperativa",
+          "Faz parte de associação produtiva",
+          "Faz parte de grupo ou coletivo produtivo",
+          "Atua com Economia Solidária, mas ainda não possui cadastro formal",
+          "Não participa",
+          "Não sei informar"
         ]
       },
       {
@@ -644,6 +796,23 @@
         ]
       },
       {
+        "key": "connection_interest",
+        "label": "Qual conexão faria mais sentido para você agora?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Encontrar compradores / clientes",
+          "Encontrar fornecedores sustentáveis",
+          "Participar de compras coletivas (ex.: embalagens e insumos sustentáveis)",
+          "Encontrar soluções de coleta, reciclagem ou compostagem",
+          "Melhorar práticas de circularidade / evoluir no ICC",
+          "Divulgar produtos ou serviços no mapa / Lugar de Mercado",
+          "Conhecer o Programa Agente Multiplicador Circular",
+          "Conhecer benefícios, parceiros e oportunidades da rede",
+          "Outro"
+        ]
+      },
+      {
         "key": "pilot_interest",
         "label": "Você teria interesse em testar uma solução de conexão com demanda local e indicadores?",
         "type": "radio",
@@ -653,12 +822,29 @@
           "Talvez",
           "Não"
         ]
+      },
+      {
+        "key": "referral_interest",
+        "label": "Você conhece algum negócio, cooperativa, produtor, artesão ou iniciativa sustentável que deveria fazer parte do nosso mapeamento?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Sim, quero indicar",
+          "Talvez depois",
+          "Não agora"
+        ]
+      },
+      {
+        "key": "referral_details",
+        "label": "Se quiser indicar, informe nome do negócio ou iniciativa e, se souber, Instagram/site, município/bairro ou contato.",
+        "type": "textarea",
+        "required": false
       }
     ]
   },
   "cooperative": {
-    "title": "Cooperativa / operador(a) circular",
-    "subtitle": "Capacidade, demanda, rastreabilidade e impacto — base para um diagnóstico preliminar de circularidade e impacto.",
+    "title": "Economia Solidária / cooperativa / operador(a) circular",
+    "subtitle": "Organização coletiva, capacidade, acesso a mercado, circularidade, rastreabilidade e impacto — base para um diagnóstico preliminar.",
     "questions": [
       {
         "key": "municipality",
@@ -668,19 +854,39 @@
       },
       {
         "key": "service_type",
-        "label": "Qual serviço oferece?",
+        "label": "Qual opção melhor descreve a atuação do empreendimento ou organização?",
         "type": "checkbox",
         "required": true,
         "options": [
-          "Coleta seletiva",
-          "Reciclagem",
-          "Compostagem",
-          "Óleo usado",
-          "Vidro",
-          "Eletrônicos",
-          "Logística reversa",
-          "Reuso / reparo",
+          "Cooperativa de catadores / coleta seletiva",
+          "Reciclagem / logística reversa",
+          "Compostagem / orgânicos",
+          "Artesanato / produção coletiva",
+          "Alimentos / gastronomia",
+          "Agricultura familiar / agroecologia",
+          "Moda / costura / produção autoral",
+          "Cultura / produção comunitária",
+          "Prestação de serviços",
+          "Associação produtiva",
+          "Grupo ou coletivo produtivo",
           "Outro"
+        ]
+      },
+      {
+        "key": "solidarity_link",
+        "label": "Seu empreendimento está cadastrado no Cadsol ou faz parte de algum coletivo da Economia Solidária ou do Fórum de Economia Solidária de Niterói?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Está cadastrado no Cadsol",
+          "Participa do Fórum de Economia Solidária de Niterói (FES-Nit)",
+          "Participa de outro coletivo, fórum ou rede de Economia Solidária",
+          "Faz parte de cooperativa",
+          "Faz parte de associação produtiva",
+          "Faz parte de grupo ou coletivo produtivo",
+          "Atua com Economia Solidária, mas ainda não possui cadastro formal",
+          "Não participa",
+          "Não sei informar"
         ]
       },
       {
@@ -775,6 +981,23 @@
         ]
       },
       {
+        "key": "connection_interest",
+        "label": "Qual conexão faria mais sentido para você agora?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Encontrar compradores / clientes",
+          "Encontrar fornecedores sustentáveis",
+          "Participar de compras coletivas (ex.: embalagens e insumos sustentáveis)",
+          "Encontrar soluções de coleta, reciclagem ou compostagem",
+          "Melhorar práticas de circularidade / evoluir no ICC",
+          "Divulgar produtos ou serviços no mapa / Lugar de Mercado",
+          "Conhecer o Programa Agente Multiplicador Circular",
+          "Conhecer benefícios, parceiros e oportunidades da rede",
+          "Outro"
+        ]
+      },
+      {
         "key": "pilot_interest",
         "label": "Você teria interesse em testar uma solução que conecte sua oferta a empresas e gere indicadores das conexões?",
         "type": "radio",
@@ -784,6 +1007,23 @@
           "Talvez",
           "Não"
         ]
+      },
+      {
+        "key": "referral_interest",
+        "label": "Você conhece algum negócio, cooperativa, produtor, artesão ou iniciativa sustentável que deveria fazer parte do nosso mapeamento?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Sim, quero indicar",
+          "Talvez depois",
+          "Não agora"
+        ]
+      },
+      {
+        "key": "referral_details",
+        "label": "Se quiser indicar, informe nome do negócio ou iniciativa e, se souber, Instagram/site, município/bairro ou contato.",
+        "type": "textarea",
+        "required": false
       }
     ]
   },
