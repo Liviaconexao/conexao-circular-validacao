@@ -269,15 +269,23 @@ function renderSuccess(emailSent,hasContact){
   nextBtn.style.display='none';
 
   const surveyUrl=location.origin+location.pathname;
-  const shareText='Estou participando de uma pesquisa do Conexão Circular sobre conexões locais, economia circular, negócios de impacto e indicadores. Se esse tema também faz sentido para você ou sua organização, participe: '+surveyUrl;
+  const shareText='Estou participando do Diagnóstico Conexão Circular, uma startup de economia circular e solidária que conecta pessoas, negócios e territórios. Se esse tema também faz sentido para você ou sua organização, participe: '+surveyUrl;
   const wa='https://wa.me/?text='+encodeURIComponent(shareText);
+  const priorityHtml=Array.isArray(answers.connection_interest)&&answers.connection_interest.length
+    ? '<div class="consent-box" style="text-align:left;margin-top:18px"><strong>Conexões que você priorizou</strong><p>'+answers.connection_interest.map(esc).join(' • ')+'</p></div>'
+    : '';
+  const referralHtml=answers.referral_interest==='Sim, quero indicar'
+    ? '<div class="consent-box" style="text-align:left;margin-top:18px"><strong>Indicação para o mapeamento registrada</strong><p>'+(answers.referral_details?esc(answers.referral_details):'Você sinalizou que deseja indicar uma iniciativa. Em breve poderemos entrar em contato para completar os dados.')+'</p></div>'
+    : '';
 
   body.innerHTML=`
     <div class="success">
       <div class="big">✓</div>
       <h3>Resposta registrada.</h3>
-      <p>Obrigada por participar do Diagnóstico Conexão Circular.</p>
+      <p>Obrigada por participar do Diagnóstico Conexão Circular — economia circular e solidária.</p>
       <p>${hasContact?(emailSent?'Enviamos um e-mail de confirmação. Seu contato ficou registrado para o diagnóstico preliminar.':'Seu contato foi registrado para o diagnóstico preliminar.'): 'Sua resposta foi registrada sem dados de contato.'}</p>
+      ${priorityHtml}
+      ${referralHtml}
 
       <div class="consent-box" style="text-align:left;margin-top:18px">
         <strong>O diagnóstico é um ponto de partida.</strong>
@@ -286,7 +294,7 @@ function renderSuccess(emailSent,hasContact){
 
       <div class="consent-box" style="text-align:left;margin-top:18px">
         <strong>Ajude a ampliar esta escuta.</strong>
-        <p>Se você conhece alguém interessado em negócios de impacto, economia circular, compras inclusivas, sustentabilidade ou desenvolvimento local, compartilhe esta pesquisa.</p>
+        <p>Se você conhece alguém interessado em economia circular e solidária, negócios de impacto, compras locais e inclusivas, sustentabilidade ou desenvolvimento territorial, compartilhe esta pesquisa.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <a class="primary" href="${wa}" target="_blank" rel="noopener noreferrer" style="text-decoration:none">Compartilhar no WhatsApp</a>
           <button class="secondary darkbtn" type="button" onclick="copySurveyLink('${escAttr(surveyUrl)}')">Copiar link</button>
