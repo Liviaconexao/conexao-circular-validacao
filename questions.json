@@ -1,7 +1,7 @@
 {
   "b2b": {
-    "title": "Hotel, restaurante ou empresa",
-    "subtitle": "Validação do problema, práticas circulares e linha de base de impacto — base para um diagnóstico preliminar de circularidade e impacto.",
+    "title": "Empresa / gerador / comprador B2B",
+    "subtitle": "Necessidades operacionais, fluxos de materiais, compras, circularidade e educação climática — base para conexões B2B e diagnóstico preliminar.",
     "questions": [
       {
         "key": "municipality",
@@ -24,21 +24,182 @@
         ]
       },
       {
-        "key": "impact_orientation",
-        "label": "Seu negócio busca gerar, além de resultado econômico, algum benefício social, ambiental ou territorial?",
+        "key": "main_need_90d",
+        "label": "Qual necessidade sua organização mais precisa resolver nos próximos 3 meses?",
         "type": "radio",
         "required": true,
         "options": [
-          "Sim, faz parte do propósito / modelo do negócio",
-          "Sim, mas ainda de forma pouco estruturada",
-          "Temos algumas práticas ou ações",
+          "Destinar resíduos orgânicos / compostagem",
+          "Destinar recicláveis / conectar a cooperativa",
+          "Reduzir descartáveis e embalagens",
+          "Encontrar fornecedor local / sustentável",
+          "Comprar de cooperativas / Economia Solidária",
+          "Melhorar rastreabilidade / evidências ESG",
+          "Reduzir custo ou tempo de operação",
+          "Outra"
+        ]
+      },
+      {
+        "key": "organic_generation",
+        "label": "Sua operação gera resíduos orgânicos?",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Sim",
           "Não",
           "Não sei avaliar"
         ]
       },
       {
+        "key": "organic_types",
+        "label": "Quais resíduos orgânicos aparecem com mais frequência?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Restos de preparo de alimentos",
+          "Alimentos não vendidos / sobras",
+          "Frutas, legumes e cascas",
+          "Borra de café",
+          "Poda / jardinagem",
+          "Outros",
+          "Não se aplica"
+        ]
+      },
+      {
+        "key": "organic_volume",
+        "label": "Qual o volume aproximado de orgânicos gerado por semana?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Menos de 5 kg",
+          "5 a 20 kg",
+          "21 a 50 kg",
+          "51 a 100 kg",
+          "101 a 300 kg",
+          "Mais de 300 kg",
+          "Não sei"
+        ]
+      },
+      {
+        "key": "organic_measurement",
+        "label": "Como esse volume é acompanhado hoje?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Pesamos regularmente",
+          "Pesamos às vezes",
+          "Estimamos por sacos / recipientes",
+          "Não medimos",
+          "Não se aplica"
+        ]
+      },
+      {
+        "key": "organic_destination",
+        "label": "Qual é o destino atual dos resíduos orgânicos?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Lixo comum",
+          "Coleta pública",
+          "Compostagem própria",
+          "Empresa / serviço de compostagem",
+          "Cooperativa / parceiro",
+          "Outro",
+          "Não sei",
+          "Não se aplica"
+        ]
+      },
+      {
+        "key": "recyclable_streams",
+        "label": "Quais materiais recicláveis sua operação gera com frequência?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Papel / papelão",
+          "Plástico",
+          "Vidro",
+          "Metal",
+          "Embalagem longa vida",
+          "Óleo usado",
+          "Eletrônicos",
+          "Outros",
+          "Não sei",
+          "Não se aplica"
+        ]
+      },
+      {
+        "key": "recyclable_volume",
+        "label": "Qual o volume total aproximado de recicláveis por semana?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Menos de 10 kg",
+          "10 a 30 kg",
+          "31 a 100 kg",
+          "101 a 300 kg",
+          "Mais de 300 kg",
+          "Não sei",
+          "Não se aplica"
+        ]
+      },
+      {
+        "key": "storage_capacity",
+        "label": "Existe espaço para separar e armazenar materiais até a retirada?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Sim, adequado",
+          "Sim, mas limitado",
+          "Não",
+          "Não sei",
+          "Não se aplica"
+        ]
+      },
+      {
+        "key": "packaging_use",
+        "label": "Sua organização compra descartáveis ou embalagens com frequência?",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Sim, em grande volume",
+          "Sim, em volume moderado",
+          "Sim, pouco",
+          "Não"
+        ]
+      },
+      {
+        "key": "packaging_barrier",
+        "label": "Qual é a maior barreira para substituir descartáveis/embalagens por alternativas de menor impacto?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Preço",
+          "Quantidade mínima",
+          "Frete",
+          "Falta de fornecedor",
+          "Desempenho / qualidade",
+          "Armazenamento",
+          "Aceitação do cliente",
+          "Não conheço alternativas",
+          "Não se aplica",
+          "Outra"
+        ]
+      },
+      {
+        "key": "collective_buying_interest",
+        "label": "Participaria de uma compra coletiva para acessar embalagens ou insumos sustentáveis com melhores condições?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Sim",
+          "Talvez",
+          "Não",
+          "Não se aplica"
+        ]
+      },
+      {
         "key": "circular_practices",
-        "label": "Quais destas práticas fazem parte da operação hoje?",
+        "label": "Quais práticas já fazem parte da operação hoje?",
         "type": "checkbox",
         "required": false,
         "options": [
@@ -56,65 +217,22 @@
         ]
       },
       {
-        "key": "main_problem_90d",
-        "label": "Nos últimos 90 dias, qual dificuldade mais afetou sua operação ou suas compras?",
-        "type": "radio",
-        "required": true,
-        "options": [
-          "Encontrar fornecedor / parceiro adequado",
-          "Encontrar solução sustentável próxima",
-          "Comprar de negócios locais / de impacto",
-          "Destinar ou rastrear resíduos / materiais",
-          "Comprovar práticas ou impacto",
-          "Perder tempo buscando informações dispersas",
-          "Nenhuma dessas",
-          "Outro"
-        ]
-      },
-      {
-        "key": "problem_frequency",
-        "label": "Com que frequência essa dificuldade acontece?",
-        "type": "radio",
-        "required": true,
-        "options": [
-          "Quase nunca",
-          "Algumas vezes por ano",
-          "Mensalmente",
-          "Semanalmente",
-          "Com muita frequência"
-        ]
-      },
-      {
-        "key": "current_solution",
-        "label": "Quando isso acontece, como sua organização resolve hoje?",
+        "key": "climate_learning",
+        "label": "Em quais temas de educação climática sua equipe teria interesse em avançar?",
         "type": "checkbox",
-        "required": true,
+        "required": false,
         "options": [
-          "Indicação de conhecidos",
-          "WhatsApp",
-          "Instagram / redes sociais",
-          "Google",
-          "Fornecedor já conhecido",
-          "Associação / rede",
-          "Busca presencial",
-          "Não conseguimos resolver bem",
-          "Outro"
-        ]
-      },
-      {
-        "key": "problem_consequence",
-        "label": "Que consequência essa dificuldade costuma gerar?",
-        "type": "checkbox",
-        "required": true,
-        "options": [
-          "Perda de tempo",
-          "Custo maior",
-          "Atraso na operação",
-          "Perda de venda / oportunidade",
-          "Compra fora do território",
-          "Dificuldade de comprovar impacto / ESG",
-          "Nenhuma consequência relevante",
-          "Outro"
+          "Resíduos e clima",
+          "Compostagem",
+          "Consumo e compras responsáveis",
+          "Água",
+          "Energia",
+          "Mobilidade",
+          "Alimentação",
+          "Biodiversidade",
+          "Emissões de GEE",
+          "Economia circular",
+          "Nenhum agora"
         ]
       },
       {
@@ -131,37 +249,25 @@
         ]
       },
       {
-        "key": "practice_maturity",
-        "label": "Essas práticas de circularidade e impacto fazem parte de decisões regulares da organização ou acontecem principalmente de forma pontual?",
-        "type": "radio",
-        "required": true,
-        "options": [
-          "Ainda não fazem parte da rotina",
-          "Acontecem de forma pontual",
-          "Acontecem com alguma frequência",
-          "Já fazem parte de processos regulares",
-          "Estão integradas à estratégia e às decisões"
-        ]
-      },
-      {
         "key": "connection_interest",
-        "label": "Qual conexão faria mais sentido para sua organização agora?",
+        "label": "Que conexão seria mais útil agora?",
         "type": "checkbox",
         "required": false,
         "options": [
-          "Encontrar fornecedores locais / sustentáveis",
-          "Participar de compras coletivas de insumos sustentáveis",
-          "Encontrar solução para resíduos recicláveis",
-          "Encontrar solução para resíduos orgânicos / compostagem",
-          "Comprar de cooperativas / empreendimentos da Economia Solidária",
-          "Melhorar práticas de circularidade / evoluir no ICC",
-          "Conhecer benefícios, parceiros e oportunidades da rede",
+          "Serviço de compostagem",
+          "Cooperativa / reciclagem",
+          "Fornecedor local / sustentável",
+          "Embalagens sustentáveis",
+          "Compra coletiva",
+          "Comprar de Economia Solidária",
+          "Melhorar ICC / práticas circulares",
+          "Gerar evidências / indicadores",
           "Outro"
         ]
       },
       {
         "key": "pilot_interest",
-        "label": "Você teria interesse em testar uma solução que conecte oferta e demanda sustentável no território e gere indicadores dessas conexões?",
+        "label": "Você teria interesse em testar uma conexão B2B que resolva essa necessidade e permita acompanhar resultados?",
         "type": "radio",
         "required": true,
         "options": [
@@ -191,7 +297,7 @@
   },
   "b2g": {
     "title": "Poder público / gestão territorial",
-    "subtitle": "Problemas de conexão territorial, dados e linha de base para políticas públicas — base para um diagnóstico preliminar de circularidade e impacto.",
+    "subtitle": "Diagnóstico de gargalos territoriais, dados, programas, circularidade e educação climática — base para inteligência territorial e pilotos B2G.",
     "questions": [
       {
         "key": "municipality",
@@ -215,8 +321,56 @@
         ]
       },
       {
+        "key": "territorial_priority",
+        "label": "Qual problema territorial é mais prioritário hoje?",
+        "type": "checkbox",
+        "required": true,
+        "options": [
+          "Resíduos orgânicos sem destinação adequada",
+          "Baixa coleta seletiva / reciclagem",
+          "Pouca integração com cooperativas",
+          "Compras públicas sustentáveis / inclusivas",
+          "Baixa conexão entre negócios locais e demanda",
+          "Dados dispersos sobre atores e fluxos",
+          "Educação climática / mobilização social",
+          "Turismo sustentável / regenerativo",
+          "Outro"
+        ]
+      },
+      {
+        "key": "existing_programs",
+        "label": "Existem programas, projetos ou contratos ativos relacionados a esses temas?",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Sim, com monitoramento estruturado",
+          "Sim, mas com dados fragmentados",
+          "Existem ações pontuais",
+          "Ainda não",
+          "Não sei informar"
+        ]
+      },
+      {
+        "key": "available_data",
+        "label": "Quais dados o órgão já possui ou consegue acessar?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Cadastros de negócios / fornecedores",
+          "Dados de resíduos / coleta",
+          "Dados de cooperativas",
+          "Dados de turismo",
+          "Compras / contratos públicos",
+          "Indicadores socioeconômicos",
+          "Geodados / mapas",
+          "Pesquisas com cidadãos",
+          "Outros",
+          "Dados muito dispersos"
+        ]
+      },
+      {
         "key": "main_gap",
-        "label": "Qual é hoje a maior dificuldade para enxergar e conectar atores do território?",
+        "label": "Qual é hoje a maior dificuldade para transformar esses dados em decisão?",
         "type": "radio",
         "required": true,
         "options": [
@@ -230,33 +384,63 @@
         ]
       },
       {
-        "key": "current_solution",
-        "label": "Como essa necessidade é resolvida hoje?",
+        "key": "actor_mapping",
+        "label": "Quais atores precisam estar conectados para essa política ou programa funcionar melhor?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Empresas / grandes geradores",
+          "Hotéis / restaurantes / turismo",
+          "Cooperativas / catadores",
+          "Compostagem / operadores circulares",
+          "Produtores / Economia Solidária",
+          "Escolas / educação",
+          "Universidades",
+          "Sociedade civil",
+          "Outros"
+        ]
+      },
+      {
+        "key": "desired_outputs",
+        "label": "Que entrega seria mais útil para a gestão?",
         "type": "checkbox",
         "required": true,
         "options": [
-          "Planilhas / cadastros internos",
-          "Indicações / redes locais",
-          "Sistemas de diferentes secretarias",
-          "Busca manual",
-          "Parcerias institucionais",
-          "Não há solução integrada",
+          "Mapa georreferenciado de atores",
+          "Diagnóstico territorial",
+          "Painel de indicadores",
+          "Rastreabilidade / evidências",
+          "Match entre demanda e oferta",
+          "Monitoramento de programa",
+          "Relatório periódico",
+          "Apoio à articulação territorial",
           "Outro"
         ]
       },
       {
-        "key": "problem_consequence",
-        "label": "Qual consequência essa fragmentação gera com mais frequência?",
-        "type": "checkbox",
+        "key": "climate_education_b2g",
+        "label": "A educação climática é hoje uma necessidade da política ou programa?",
+        "type": "radio",
         "required": true,
         "options": [
-          "Retrabalho",
-          "Dados desatualizados",
-          "Decisão mais lenta",
-          "Dificuldade de medir resultados",
-          "Baixa conexão entre oferta e demanda",
-          "Perda de oportunidades territoriais",
-          "Outro"
+          "Sim, prioritária",
+          "Sim, como componente complementar",
+          "Ainda não está estruturada",
+          "Não",
+          "Não sei informar"
+        ]
+      },
+      {
+        "key": "public_procurement",
+        "label": "Existe interesse em ampliar compras públicas locais, sustentáveis ou inclusivas?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Sim, já existe agenda",
+          "Sim, mas ainda inicial",
+          "Talvez",
+          "Não no momento",
+          "Não sei informar"
         ]
       },
       {
@@ -273,21 +457,22 @@
         ]
       },
       {
-        "key": "practice_maturity",
-        "label": "Circularidade, compras sustentáveis e impacto territorial já fazem parte de processos regulares de planejamento ou gestão?",
-        "type": "radio",
-        "required": true,
+        "key": "pilot_scope",
+        "label": "Qual formato de piloto faria mais sentido?",
+        "type": "checkbox",
+        "required": false,
         "options": [
-          "Ainda não",
-          "Aparecem em ações pontuais",
-          "Aparecem em alguns programas ou projetos",
-          "Já fazem parte de processos regulares",
-          "Estão integrados ao planejamento, indicadores e decisões"
+          "Um bairro / território",
+          "Um setor econômico",
+          "Uma rota turística",
+          "Uma rede de geradores e operadores",
+          "Um programa público específico",
+          "Ainda precisamos definir"
         ]
       },
       {
         "key": "pilot_interest",
-        "label": "Há interesse em testar um piloto territorial de conexão e indicadores?",
+        "label": "Há interesse em conversar sobre um piloto territorial de conexão, dados e indicadores?",
         "type": "radio",
         "required": true,
         "options": [
@@ -299,8 +484,8 @@
     ]
   },
   "producer": {
-    "title": "Produtor(a) / fornecedor local",
-    "subtitle": "Acesso a mercado, circularidade e linha de base de impacto — base para um diagnóstico preliminar de circularidade e impacto.",
+    "title": "Negócio sustentável / produtor / fornecedor",
+    "subtitle": "Acesso a mercado, visibilidade, vendas B2B/B2G, circularidade e capacidade de oferta.",
     "questions": [
       {
         "key": "municipality",
@@ -342,28 +527,146 @@
         ]
       },
       {
-        "key": "impact_orientation",
-        "label": "Seu negócio busca gerar, além de resultado econômico, algum benefício social, ambiental ou territorial?",
-        "type": "radio",
+        "key": "offer_description",
+        "label": "O que você comercializa hoje?",
+        "type": "textarea",
+        "required": true
+      },
+      {
+        "key": "sales_audience",
+        "label": "Para quem você vende atualmente?",
+        "type": "checkbox",
         "required": true,
         "options": [
-          "Sim, faz parte do propósito / modelo do negócio",
-          "Sim, mas ainda de forma pouco estruturada",
-          "Temos algumas práticas ou ações",
-          "Não",
-          "Não sei avaliar"
+          "Consumidor final",
+          "Empresas",
+          "Hotéis / pousadas",
+          "Restaurantes / cafés",
+          "Lojas / revendedores",
+          "Eventos",
+          "Poder público",
+          "Ainda estou começando",
+          "Outro"
         ]
       },
       {
-        "key": "circular_practices",
-        "label": "Quais destas práticas fazem parte do negócio hoje?",
+        "key": "sales_channels",
+        "label": "Por quais canais você vende hoje?",
+        "type": "checkbox",
+        "required": true,
+        "options": [
+          "WhatsApp",
+          "Instagram / redes sociais",
+          "Site / e-commerce",
+          "Marketplace",
+          "Loja física",
+          "Feiras / eventos",
+          "Representantes / revendedores",
+          "Venda direta B2B",
+          "Outro"
+        ]
+      },
+      {
+        "key": "monthly_capacity",
+        "label": "Sua capacidade atual permite atender novos clientes?",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Sim, com bastante capacidade",
+          "Sim, com alguma capacidade",
+          "Depende do produto / período",
+          "Não no momento",
+          "Ainda não sei"
+        ]
+      },
+      {
+        "key": "desired_market",
+        "label": "Que mercado você gostaria de acessar mais?",
+        "type": "checkbox",
+        "required": true,
+        "options": [
+          "Consumidor final",
+          "Empresas",
+          "Hotelaria / turismo",
+          "Gastronomia",
+          "Lojas / pontos de venda",
+          "Eventos",
+          "Poder público",
+          "Outros territórios"
+        ]
+      },
+      {
+        "key": "commercial_priority",
+        "label": "O que mais ajudaria seu negócio hoje?",
+        "type": "checkbox",
+        "required": true,
+        "options": [
+          "Mais clientes",
+          "Mais visibilidade",
+          "Vender para empresas",
+          "Vender para governo",
+          "Participar de eventos",
+          "Aparecer em conteúdo / Revista",
+          "Ter representantes / agentes",
+          "Entrar em rotas",
+          "Melhorar práticas circulares",
+          "Outro"
+        ]
+      },
+      {
+        "key": "conexao_offers_interest",
+        "label": "Quais oportunidades do Conexão Circular mais interessam?",
         "type": "checkbox",
         "required": false,
         "options": [
-          "Redução de desperdícios / recursos",
+          "Vitrine / perfil no mapa",
+          "Revista Circular",
+          "Feiras e eventos",
+          "Rotas e experiências",
+          "Clube de Benefícios",
+          "Agentes Multiplicadores",
+          "Conexões com hotéis e restaurantes",
+          "Conexões com empresas",
+          "Conexões com poder público",
+          "Campanhas / patrocínio"
+        ]
+      },
+      {
+        "key": "commercial_model",
+        "label": "Se houver geração de valor comprovada, qual formato comercial faria mais sentido?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Assinatura mensal",
+          "Assinatura anual",
+          "Comissão por venda / conexão",
+          "Participação por evento",
+          "Publicidade / patrocínio",
+          "Quero entender primeiro"
+        ]
+      },
+      {
+        "key": "material_inputs",
+        "label": "Quais insumos ou materiais você compra com frequência e gostaria de acessar em melhores condições?",
+        "type": "textarea",
+        "required": false
+      },
+      {
+        "key": "residual_outputs",
+        "label": "Sua atividade gera sobras ou materiais que poderiam ser reaproveitados por outro negócio? Quais?",
+        "type": "textarea",
+        "required": false
+      },
+      {
+        "key": "circular_practices",
+        "label": "Quais práticas circulares fazem parte do negócio hoje?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Redução de desperdícios",
           "Reutilização / reparo",
           "Reciclagem / materiais reciclados",
-          "Compostagem / aproveitamento de orgânicos",
+          "Compostagem / orgânicos",
           "Logística reversa",
           "Matéria-prima local / recuperada",
           "Produção sob demanda",
@@ -373,96 +676,21 @@
         ]
       },
       {
-        "key": "main_problem_90d",
-        "label": "Nos últimos 90 dias, qual foi sua maior dificuldade comercial?",
-        "type": "radio",
-        "required": true,
-        "options": [
-          "Encontrar novos clientes",
-          "Acessar compradores B2B",
-          "Aumentar recorrência",
-          "Ganhar visibilidade",
-          "Logística",
-          "Preço / margem",
-          "Comprovar impacto",
-          "Outro"
-        ]
-      },
-      {
-        "key": "problem_frequency",
-        "label": "Com que frequência essa dificuldade acontece?",
-        "type": "radio",
-        "required": true,
-        "options": [
-          "Quase nunca",
-          "Algumas vezes por ano",
-          "Mensalmente",
-          "Semanalmente",
-          "Com muita frequência"
-        ]
-      },
-      {
-        "key": "current_solution",
-        "label": "Como você busca clientes e oportunidades hoje?",
-        "type": "checkbox",
-        "required": true,
-        "options": [
-          "Indicação",
-          "WhatsApp",
-          "Instagram / redes sociais",
-          "Google",
-          "Feiras / eventos",
-          "Associação / rede",
-          "Prospecção direta",
-          "Outro"
-        ]
-      },
-      {
         "key": "impact_measurement",
-        "label": "Hoje você acompanha algum indicador ou evidência do impacto do negócio?",
+        "label": "Você registra alguma evidência ou indicador de impacto do negócio?",
         "type": "radio",
         "required": true,
         "options": [
           "Sim, de forma estruturada",
           "Sim, parcialmente",
-          "Temos registros, mas não indicadores",
+          "Tenho registros simples",
           "Ainda não",
           "Não sei avaliar"
         ]
       },
       {
-        "key": "practice_maturity",
-        "label": "As práticas de circularidade e impacto fazem parte da rotina do negócio ou acontecem principalmente de forma pontual?",
-        "type": "radio",
-        "required": true,
-        "options": [
-          "Ainda não fazem parte da rotina",
-          "Acontecem de forma pontual",
-          "Acontecem com alguma frequência",
-          "Já fazem parte de processos regulares",
-          "Estão integradas à estratégia e às decisões"
-        ]
-      },
-      {
-        "key": "connection_interest",
-        "label": "Qual conexão faria mais sentido para você agora?",
-        "type": "checkbox",
-        "required": false,
-        "options": [
-          "Encontrar compradores / clientes",
-          "Encontrar fornecedores sustentáveis",
-          "Participar de compras coletivas (ex.: embalagens e insumos sustentáveis)",
-          "Encontrar soluções de coleta, reciclagem ou compostagem",
-          "Melhorar práticas de circularidade / evoluir no ICC",
-          "Divulgar produtos ou serviços no mapa / Lugar de Mercado",
-          "Conhecer o Programa Agente Multiplicador Circular",
-          "Conhecer benefícios, parceiros e oportunidades da rede",
-          "Outro"
-        ]
-      },
-      {
         "key": "pilot_interest",
-        "label": "Você teria interesse em testar uma solução que conecte seu negócio a compradores e gere indicadores dessas conexões?",
+        "label": "Você teria interesse em testar uma frente de visibilidade e conexão comercial do Conexão Circular?",
         "type": "radio",
         "required": true,
         "options": [
@@ -492,7 +720,7 @@
   },
   "artist": {
     "title": "Artista / artesão(ã)",
-    "subtitle": "Acesso a mercado, práticas circulares e impacto territorial — base para um diagnóstico preliminar de circularidade e impacto.",
+    "subtitle": "Arte, reaproveitamento, upcycling, acesso a materiais, mercado e visibilidade.",
     "questions": [
       {
         "key": "municipality",
@@ -533,68 +761,106 @@
         ]
       },
       {
-        "key": "impact_orientation",
-        "label": "Seu trabalho busca gerar algum benefício social, ambiental, cultural ou territorial além da renda?",
-        "type": "radio",
-        "required": true,
-        "options": [
-          "Sim, faz parte do propósito",
-          "Sim, mas ainda pouco estruturado",
-          "Temos algumas práticas ou ações",
-          "Não",
-          "Não sei avaliar"
-        ]
-      },
-      {
-        "key": "circular_practices",
-        "label": "Quais destas práticas fazem parte do seu trabalho hoje?",
+        "key": "reused_materials",
+        "label": "Quais materiais reaproveitados fazem parte do seu trabalho?",
         "type": "checkbox",
         "required": false,
         "options": [
-          "Uso de materiais reaproveitados",
-          "Reparo / transformação de materiais",
-          "Materiais locais",
-          "Produção sob demanda",
-          "Redução de desperdícios",
-          "Embalagem de menor impacto",
-          "Nenhuma dessas",
-          "Não sei avaliar"
+          "Retalhos / tecidos",
+          "Roupas usadas",
+          "Madeira",
+          "Vidro",
+          "Papel / papelão",
+          "Plásticos",
+          "Metais",
+          "Banners / lonas",
+          "Embalagens",
+          "Resíduos de construção",
+          "Materiais naturais",
+          "Outros",
+          "Não utilizo materiais reaproveitados"
         ]
       },
       {
-        "key": "main_problem_90d",
-        "label": "Nos últimos 90 dias, qual foi sua maior dificuldade comercial?",
-        "type": "radio",
-        "required": true,
+        "key": "material_source",
+        "label": "De onde vêm principalmente esses materiais?",
+        "type": "checkbox",
+        "required": false,
         "options": [
-          "Pouca visibilidade",
-          "Poucas vendas",
-          "Poucas contratações",
-          "Dificuldade de chegar a empresas",
-          "Falta de espaços / canais",
-          "Precificação",
+          "Sobras próprias",
+          "Doações",
+          "Empresas parceiras",
+          "Cooperativas",
+          "Outros produtores",
+          "Compra de material reaproveitado",
+          "Coleta / recuperação local",
+          "Outro",
+          "Não se aplica"
+        ]
+      },
+      {
+        "key": "reused_share",
+        "label": "Aproximadamente que parte da sua matéria-prima é reaproveitada?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Até 25%",
+          "26% a 50%",
+          "51% a 75%",
+          "Mais de 75%",
+          "Não sei",
+          "Não se aplica"
+        ]
+      },
+      {
+        "key": "upcycling_practices",
+        "label": "Quais processos você realiza?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Reparo",
+          "Customização",
+          "Transformação de peça / material",
+          "Redesign",
+          "Desmontagem para reaproveitar componentes",
+          "Reaproveitamento de retalhos",
+          "Revenda de segunda mão",
+          "Criação artística com resíduos",
           "Outro"
         ]
       },
       {
-        "key": "current_solution",
-        "label": "Como você encontra clientes e oportunidades hoje?",
+        "key": "generated_leftovers",
+        "label": "Que sobras ou resíduos sua produção gera e em que quantidade aproximada por mês?",
+        "type": "textarea",
+        "required": false
+      },
+      {
+        "key": "materials_wanted",
+        "label": "Quais materiais você gostaria de receber regularmente de empresas ou parceiros?",
+        "type": "textarea",
+        "required": false
+      },
+      {
+        "key": "commercial_priority",
+        "label": "O que mais ajudaria seu trabalho hoje?",
         "type": "checkbox",
         "required": true,
         "options": [
-          "Indicação",
-          "WhatsApp",
-          "Instagram / redes sociais",
-          "Feiras / eventos",
-          "Lojas / pontos físicos",
-          "Rede cultural",
-          "Prospecção direta",
+          "Mais clientes",
+          "Vender para empresas",
+          "Vender para poder público",
+          "Participar de feiras / eventos",
+          "Aparecer na Revista Circular",
+          "Entrar na Vitrine / mapa",
+          "Receber materiais para reaproveitamento",
+          "Ter apoio de Agentes Multiplicadores",
           "Outro"
         ]
       },
       {
         "key": "impact_measurement",
-        "label": "Você registra ou mede algum resultado social, ambiental, cultural ou territorial do seu trabalho?",
+        "label": "Você registra quantidade de material reaproveitado, peças transformadas ou outros resultados?",
         "type": "radio",
         "required": true,
         "options": [
@@ -605,38 +871,24 @@
         ]
       },
       {
-        "key": "practice_maturity",
-        "label": "As práticas sociais, ambientais, culturais ou circulares fazem parte da sua rotina de trabalho ou acontecem principalmente de forma pontual?",
-        "type": "radio",
-        "required": true,
-        "options": [
-          "Ainda não fazem parte da rotina",
-          "Acontecem de forma pontual",
-          "Acontecem com alguma frequência",
-          "Já fazem parte da rotina profissional",
-          "Estão integradas ao planejamento do trabalho"
-        ]
-      },
-      {
-        "key": "connection_interest",
-        "label": "Qual conexão faria mais sentido para você agora?",
+        "key": "climate_learning",
+        "label": "Que tema de educação climática seria mais útil para sua atividade?",
         "type": "checkbox",
         "required": false,
         "options": [
-          "Encontrar compradores / clientes",
-          "Encontrar fornecedores sustentáveis",
-          "Participar de compras coletivas (ex.: embalagens e insumos sustentáveis)",
-          "Encontrar soluções de coleta, reciclagem ou compostagem",
-          "Melhorar práticas de circularidade / evoluir no ICC",
-          "Divulgar produtos ou serviços no mapa / Lugar de Mercado",
-          "Conhecer o Programa Agente Multiplicador Circular",
-          "Conhecer benefícios, parceiros e oportunidades da rede",
+          "Moda circular",
+          "Upcycling",
+          "Materiais e resíduos",
+          "Consumo consciente",
+          "Pegada de materiais",
+          "Precificação de impacto",
+          "Comunicação sem greenwashing",
           "Outro"
         ]
       },
       {
         "key": "pilot_interest",
-        "label": "Você teria interesse em testar uma solução de conexão com compradores e oportunidades locais?",
+        "label": "Você teria interesse em entrar em um piloto de conexão com materiais, compradores, vitrine, revista e eventos?",
         "type": "radio",
         "required": true,
         "options": [
@@ -890,17 +1142,43 @@
         ]
       },
       {
-        "key": "impact_orientation",
-        "label": "A geração de impacto social, ambiental ou territorial faz parte do propósito da organização?",
-        "type": "radio",
+        "key": "materials_handled",
+        "label": "Quais materiais ou fluxos sua organização recebe ou processa?",
+        "type": "checkbox",
         "required": true,
         "options": [
-          "Sim, faz parte do propósito / modelo",
-          "Sim, mas ainda pouco estruturado",
-          "Temos algumas práticas ou ações",
-          "Não",
-          "Não sei avaliar"
+          "Orgânicos",
+          "Papel / papelão",
+          "Plásticos",
+          "Vidro",
+          "Metais",
+          "Óleo usado",
+          "Eletrônicos",
+          "Têxteis",
+          "Madeira",
+          "Outros"
         ]
+      },
+      {
+        "key": "monthly_volume",
+        "label": "Qual volume aproximado a organização movimenta por mês?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Até 500 kg",
+          "501 kg a 2 t",
+          "2 a 10 t",
+          "10 a 50 t",
+          "Mais de 50 t",
+          "Varia muito",
+          "Não sei informar"
+        ]
+      },
+      {
+        "key": "service_area",
+        "label": "Qual território consegue atender hoje?",
+        "type": "textarea",
+        "required": true
       },
       {
         "key": "main_problem_90d",
@@ -978,6 +1256,22 @@
           "Acontecem com alguma frequência",
           "Já fazem parte de processos regulares",
           "Estão integradas à gestão e às decisões"
+        ]
+      },
+      {
+        "key": "b2b_b2g_interest",
+        "label": "Que tipo de oportunidade interessa mais?",
+        "type": "checkbox",
+        "required": false,
+        "options": [
+          "Contratos com empresas",
+          "Parcerias com hotéis / restaurantes",
+          "Programas públicos",
+          "Compras públicas",
+          "Rotas / eventos",
+          "Visibilidade no mapa / Revista",
+          "Mais geradores recorrentes",
+          "Outro"
         ]
       },
       {
@@ -1120,6 +1414,126 @@
           "Talvez",
           "Não"
         ]
+      }
+    ]
+  },
+  "agent": {
+    "title": "Agente Multiplicador Circular",
+    "subtitle": "Território, rede, experiência de conexão e interesse em atuar como representante de soluções circulares.",
+    "questions": [
+      {
+        "key": "municipality",
+        "label": "Em qual município e bairro você atua principalmente?",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "network_profile",
+        "label": "Com quais públicos você já se relaciona no território?",
+        "type": "checkbox",
+        "required": true,
+        "options": [
+          "Pequenos negócios",
+          "Restaurantes / bares",
+          "Hotéis / pousadas",
+          "Artesãos / produtores",
+          "Cooperativas",
+          "Associações / coletivos",
+          "Empresas",
+          "Poder público",
+          "Consumidores",
+          "Outro"
+        ]
+      },
+      {
+        "key": "experience",
+        "label": "Você já vendeu, representou, indicou ou conectou produtos/serviços profissionalmente?",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Sim, frequentemente",
+          "Sim, algumas vezes",
+          "Não, mas tenho interesse",
+          "Não"
+        ]
+      },
+      {
+        "key": "digital_routine",
+        "label": "Quais ferramentas você usa com facilidade?",
+        "type": "checkbox",
+        "required": true,
+        "options": [
+          "WhatsApp",
+          "Instagram",
+          "Formulários online",
+          "Planilhas",
+          "CRM",
+          "Mapas / geolocalização",
+          "QR Code",
+          "Outras"
+        ]
+      },
+      {
+        "key": "time_availability",
+        "label": "Quanto tempo por semana você poderia dedicar inicialmente?",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Até 2 horas",
+          "3 a 5 horas",
+          "6 a 10 horas",
+          "Mais de 10 horas",
+          "Ainda não sei"
+        ]
+      },
+      {
+        "key": "interest_areas",
+        "label": "Que tipos de conexão você teria mais interesse em ativar?",
+        "type": "checkbox",
+        "required": true,
+        "options": [
+          "Compostagem / orgânicos",
+          "Reciclagem / cooperativas",
+          "Embalagens sustentáveis",
+          "Vitrine / negócios sustentáveis",
+          "Revista / conteúdo",
+          "Eventos / feiras",
+          "Turismo / rotas",
+          "Compras coletivas",
+          "Outros"
+        ]
+      },
+      {
+        "key": "motivation",
+        "label": "O que mais te atrai no papel de Agente Multiplicador?",
+        "type": "checkbox",
+        "required": true,
+        "options": [
+          "Gerar renda",
+          "Fortalecer negócios locais",
+          "Atuar com sustentabilidade",
+          "Ampliar minha rede",
+          "Aprender / me certificar",
+          "Gerar impacto no território",
+          "Outro"
+        ]
+      },
+      {
+        "key": "pilot_interest",
+        "label": "Você gostaria de participar da seleção para a primeira turma de Agentes Multiplicadores?",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Sim",
+          "Talvez",
+          "Não"
+        ]
+      },
+      {
+        "key": "referral_details",
+        "label": "Se quiser, indique um negócio ou organização do seu território que deveria entrar no mapeamento.",
+        "type": "textarea",
+        "required": false
       }
     ]
   }
