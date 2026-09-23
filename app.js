@@ -1,6 +1,6 @@
 // Preview QA — diagnóstico preliminar ICC
 const endpoint=window.SURVEY_ENDPOINT;
-let schema=null,currentProfile=null,currentIndex=-1,sessionId=null,answers={},contact={},schemaLoadFailed=false;
+let schema=null,currentProfile=null,currentIndex=-1,sessionId=null,answers={},contact={},schemaLoadFailed=false,isSubmitting=false;
 const modal=document.getElementById('surveyModal'),body=document.getElementById('surveyBody'),titleEl=document.getElementById('surveyTitle'),subtitleEl=document.getElementById('surveySubtitle'),progress=document.getElementById('progressBar'),backBtn=document.getElementById('backBtn'),nextBtn=document.getElementById('nextBtn');
 
 fetch('questions.json')
@@ -83,6 +83,10 @@ function renderConsent(){
 }
 
 async function goNext(){
+  if(isSubmitting)return;
+  isSubmitting=true;
+  nextBtn.disabled=true;
+  backBtn.disabled=true;
   try{
     if(currentIndex===-1){
       if(!document.getElementById('consent').checked)return toast('Marque o consentimento para continuar.');
@@ -136,6 +140,10 @@ async function goNext(){
   }catch(e){
     console.error(e);
     toast('Não foi possível salvar agora. Tente novamente.');
+  }finally{
+    isSubmitting=false;
+    nextBtn.disabled=false;
+    backBtn.disabled=false;
   }
 }
 
@@ -147,6 +155,7 @@ function goBack(){
     return;
   }
   if(currentIndex===total){
+    captureContactDraft();
     currentIndex--;
     renderQuestion();
     return;
@@ -202,25 +211,36 @@ function renderContact(){
   const pi=answers.pilot_interest;
   const norm=pi==='Sim'?'yes':pi==='Não'?'no':'maybe';
 
+  const selectedInterest=contact.pilot_interest||norm;
+  const interestOptions=[
+    ['yes','Tenho interesse no piloto'],
+    ['maybe','Talvez tenha interesse'],
+    ['no','Não tenho interesse']
+  ].map(([value,label])=>`<option value="${value}" ${selectedInterest===value?'selected':''}>${label}</option>`).join('');
   body.innerHTML=`
     <div class="q">
       <label class="title">Receba seu Diagnóstico Preliminar Conexão Circular</label>
       <p class="helper">Deixe seu e-mail ou WhatsApp para receber gratuitamente uma leitura preliminar do seu perfil, com pontos fortes, oportunidades de evolução e possíveis conexões circulares. O contato é opcional e não condiciona sua participação na pesquisa.</p>
       <div class="contact-grid">
-        <input class="field" id="contact_name" placeholder="Nome">
-        <input class="field" id="contact_company" placeholder="Empresa / organização">
-        <input class="field" id="contact_phone" placeholder="Telefone / WhatsApp">
-        <input class="field" id="contact_email" type="email" placeholder="E-mail">
-        <select class="field" id="pilot_interest">
-          <option value="${norm}">${norm==='yes'?'Tenho interesse no piloto':norm==='no'?'Não tenho interesse':'Talvez tenha interesse'}</option>
-          <option value="yes">Tenho interesse no piloto</option>
-          <option value="maybe">Talvez tenha interesse</option>
-          <option value="no">Não tenho interesse</option>
-        </select>
+        <input class="field" id="contact_name" placeholder="Nome" value="${esc(contact.name||'')}">
+        <input class="field" id="contact_company" placeholder="Empresa / organização" value="${esc(contact.company||'')}">
+        <input class="field" id="contact_phone" inputmode="tel" autocomplete="tel" placeholder="Telefone / WhatsApp" value="${esc(contact.phone||'')}">
+        <input class="field" id="contact_email" type="email" autocomplete="email" placeholder="E-mail" value="${esc(contact.email||'')}">
+        <select class="field" id="pilot_interest">${interestOptions}</select>
       </div>
       <br>
-      <label class="option"><input id="contact_allowed" type="checkbox"> <span>Se eu deixar contato, autorizo seu uso para envio do diagnóstico preliminar, resultados da pesquisa e comunicações sobre eventual convite para o piloto Conexão Circular.</span></label>
+      <label class="option"><input id="contact_allowed" type="checkbox" ${contact.allowed?'checked':''}> <span>Se eu deixar contato, autorizo seu uso para envio do diagnóstico preliminar, resultados da pesquisa e comunicações sobre eventual convite para o piloto Conexão Circular.</span></label>
     </div>`;
+}
+
+function captureContactDraft(){
+  const name=document.getElementById('contact_name')?.value.trim()||'';
+  const company=document.getElementById('contact_company')?.value.trim()||'';
+  const phone=document.getElementById('contact_phone')?.value.trim()||'';
+  const email=document.getElementById('contact_email')?.value.trim()||'';
+  const allowed=document.getElementById('contact_allowed')?.checked||false;
+  const pilotInterest=document.getElementById('pilot_interest')?.value||null;
+  contact={name,company,phone,email,allowed,pilot_interest:pilotInterest};
 }
 
 function captureContact(){
@@ -244,6 +264,13 @@ function captureContact(){
     toast('Informe pelo menos e-mail ou WhatsApp.');
     return {ok:false,hasContact:true};
   }
+  if(phone){
+    const phoneDigits=phone.replace(/\D/g,'');
+    if(phoneDigits.length<8||phoneDigits.length>15){
+      toast('Informe um WhatsApp válido, com DDD quando aplicável.');
+      return {ok:false,hasContact:true};
+    }
+  }
   if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
     toast('Informe um e-mail válido.');
     return {ok:false,hasContact:true};
@@ -258,7 +285,8 @@ function captureContact(){
     company:company||null,
     phone:phone||null,
     email:email||null,
-    pilot_interest:document.getElementById('pilot_interest')?.value||null
+    pilot_interest:document.getElementById('pilot_interest')?.value||null,
+    allowed:true
   };
   return {ok:true,hasContact:true};
 }
