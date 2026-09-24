@@ -8,15 +8,15 @@ Validar problemas reais de conexão entre oferta e demanda no território e cons
 
 ## Perfis pesquisados
 
-A pesquisa possui 7 perfis:
+A pesquisa possui 8 perfis:
 
 1. Hotel, restaurante ou empresa (B2B)
 2. Poder público / gestão territorial (B2G)
-3. Produtor(a) / fornecedor local
+3. Negócio sustentável / produtor / fornecedor
 4. Artista / artesão(ã)
 5. Prestador(a) de serviços
 6. Cooperativa / operador(a) circular
-7. Consumidor(a) / turista (B2C)
+7. Agente Multiplicador Circular\n8. Consumidor(a) / turista (B2C)
 
 As perguntas variam conforme o perfil para manter a pesquisa enxuta.
 
@@ -29,10 +29,10 @@ Dimensões observadas:
 - frequência;
 - solução utilizada hoje;
 - consequência econômica ou operacional;
-- práticas circulares;
-- orientação para impacto;
+- práticas circulares e fluxos de materiais;
+- volumes, destino, capacidade e necessidades reais de conexão;\n- orientação para impacto;
 - acompanhamento de indicadores/evidências;
-- interesse em testar a solução.
+- interesse em testar a solução;\n- interesse comercial em vitrine, Revista, eventos, B2B/B2G e Agentes Multiplicadores.
 
 ## Backend
 
