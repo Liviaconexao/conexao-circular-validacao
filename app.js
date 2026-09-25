@@ -1,4 +1,4 @@
-// Preview QA — diagnóstico preliminar ICC
+// Pesquisa de validação Conexão Circular
 const endpoint=window.SURVEY_ENDPOINT;
 let schema=null,currentProfile=null,currentIndex=-1,sessionId=null,answers={},contact={},schemaLoadFailed=false,isSubmitting=false;
 const modal=document.getElementById('surveyModal'),body=document.getElementById('surveyBody'),titleEl=document.getElementById('surveyTitle'),subtitleEl=document.getElementById('surveySubtitle'),progress=document.getElementById('progressBar'),backBtn=document.getElementById('backBtn'),nextBtn=document.getElementById('nextBtn');
@@ -69,13 +69,13 @@ function renderConsent(){
       <div class="consent-box">
         <strong>Responda à pesquisa e conheça melhor suas práticas de circularidade e impacto.</strong>
         <br><br>
-        Ao final, você poderá deixar seu contato para receber gratuitamente um <strong>Diagnóstico Preliminar Conexão Circular</strong>, com uma leitura do seu perfil, pontos fortes, oportunidades de evolução e possíveis conexões circulares que podem ajudar você ou sua organização a avançar.
+        Ao final, você verá uma <strong>devolutiva preliminar</strong> baseada nas suas respostas. O contato para acompanhar resultados e possíveis oportunidades é opcional.
         <br><br>
         Enquanto isso, suas respostas também nos ajudam a identificar problemas reais de conexão no território e construir uma linha de base sobre práticas circulares, compras inclusivas e indicadores de impacto.
         <br><br>
         As respostas serão analisadas de forma agregada. Nesta etapa, os dados representam informações declaradas pelos participantes e não serão tratados como impacto comprovado sem acompanhamento posterior.
         <br><br>
-        Não pedimos endereço exato. O contato ao final é opcional. O diagnóstico é preliminar, baseado nas informações declaradas pelo participante e não constitui certificação, auditoria ou comprovação independente de impacto.
+        Não pedimos endereço exato. O contato ao final é opcional. A devolutiva é preliminar, baseada nas informações declaradas pelo participante e não constitui certificação, auditoria ou comprovação independente de impacto.
         <br><br>
         <label class="option"><input id="consent" type="checkbox"> <span>Li as informações acima e concordo voluntariamente em participar.</span></label>
       </div>
@@ -219,8 +219,8 @@ function renderContact(){
   ].map(([value,label])=>`<option value="${value}" ${selectedInterest===value?'selected':''}>${label}</option>`).join('');
   body.innerHTML=`
     <div class="q">
-      <label class="title">Receba seu Diagnóstico Preliminar Conexão Circular</label>
-      <p class="helper">Deixe seu e-mail ou WhatsApp para receber gratuitamente uma leitura preliminar do seu perfil, com pontos fortes, oportunidades de evolução e possíveis conexões circulares. O contato é opcional e não condiciona sua participação na pesquisa.</p>
+      <label class="title">Quer acompanhar os próximos passos?</label>
+      <p class="helper">Sua devolutiva preliminar aparece na próxima tela, mesmo sem deixar contato. Se quiser receber a confirmação por e-mail e notícias sobre resultados ou oportunidades da rede, deixe seu contato. O contato é opcional.</p>
       <div class="contact-grid">
         <input class="field" id="contact_name" placeholder="Nome" value="${esc(contact.name||'')}">
         <input class="field" id="contact_company" placeholder="Empresa / organização" value="${esc(contact.company||'')}">
@@ -229,7 +229,7 @@ function renderContact(){
         <select class="field" id="pilot_interest">${interestOptions}</select>
       </div>
       <br>
-      <label class="option"><input id="contact_allowed" type="checkbox" ${contact.allowed?'checked':''}> <span>Se eu deixar contato, autorizo seu uso para envio do diagnóstico preliminar, resultados da pesquisa e comunicações sobre eventual convite para o piloto Conexão Circular.</span></label>
+      <label class="option"><input id="contact_allowed" type="checkbox" ${contact.allowed?'checked':''}> <span>Se eu deixar contato, autorizo seu uso para confirmação da participação, resultados da pesquisa e eventual convite para oportunidades da Conexão Circular.</span></label>
     </div>`;
 }
 
@@ -299,9 +299,27 @@ function renderSuccess(emailSent,hasContact){
   const surveyUrl=location.origin+location.pathname;
   const shareText='Estou participando do Diagnóstico Conexão Circular, uma startup de economia circular e solidária que conecta pessoas, negócios e territórios. Se esse tema também faz sentido para você ou sua organização, participe: '+surveyUrl;
   const wa='https://wa.me/?text='+encodeURIComponent(shareText);
-  const priorityHtml=Array.isArray(answers.connection_interest)&&answers.connection_interest.length
-    ? '<div class="consent-box" style="text-align:left;margin-top:18px"><strong>Conexões que você priorizou</strong><p>'+answers.connection_interest.map(esc).join(' • ')+'</p></div>'
-    : '';
+  const challenge=answers.main_problem_90d||answers.main_problem_30d||answers.main_gap||'Você não apontou uma dificuldade principal.';
+  const priorities=Array.isArray(answers.connection_interest)?answers.connection_interest:[];
+  const opportunity=priorities.find(x=>x!=='Outro')||{
+    b2c:'Explorar opções locais e sustentáveis próximas e comparar informações antes de escolher.',
+    b2g:'Organizar dados e aproximar iniciativas, empresas e gestão pública do território.',
+    b2b:'Mapear fornecedores, soluções circulares e parceiros locais relevantes.',
+    producer:'Aproximar a oferta local de compradores e canais de divulgação.',
+    artist:'Aproximar o trabalho criativo de compradores e espaços locais.',
+    service:'Dar visibilidade aos serviços e conectar a demanda do território.',
+    cooperative:'Aproximar a organização de compradores e parceiros do território.'
+  }[currentProfile];
+  const nextStep={
+    b2c:'Na próxima busca, compare uma opção local com as alternativas habituais e observe preço, acesso e práticas declaradas.',
+    b2g:'Escolha um cadastro ou indicador territorial que possa ser atualizado e compartilhado entre áreas.',
+    b2b:'Escolha uma compra ou fluxo de materiais e identifique um possível fornecedor ou destino local.',
+    producer:'Descreva uma oferta concreta, sua capacidade e o perfil de comprador que deseja alcançar.',
+    artist:'Organize um exemplo do seu trabalho, materiais usados e onde gostaria de apresentá-lo.',
+    service:'Descreva o serviço, a área atendida e uma evidência prática que possa apresentar a clientes.',
+    cooperative:'Registre capacidade, rotas e comprovantes disponíveis para facilitar futuras parcerias.'
+  }[currentProfile];
+  const community='https://chat.whatsapp.com/JwCh19nvSGLE2doGmU1yan?s=sh&p=i&mlu=4&ilr=4';
   const referralHtml=answers.referral_interest==='Sim, quero indicar'
     ? '<div class="consent-box" style="text-align:left;margin-top:18px"><strong>Indicação para o mapeamento registrada</strong><p>'+(answers.referral_details?esc(answers.referral_details):'Você sinalizou que deseja indicar uma iniciativa. Em breve poderemos entrar em contato para completar os dados.')+'</p></div>'
     : '';
@@ -309,16 +327,20 @@ function renderSuccess(emailSent,hasContact){
   body.innerHTML=`
     <div class="success">
       <div class="big">✓</div>
-      <h3>Resposta registrada.</h3>
-      <p>Obrigada por participar do Diagnóstico Conexão Circular — economia circular e solidária.</p>
-      <p>${hasContact?(emailSent?'Enviamos um e-mail de confirmação. Seu contato ficou registrado para o diagnóstico preliminar.':'Seu contato foi registrado para o diagnóstico preliminar.'): 'Sua resposta foi registrada sem dados de contato.'}</p>
-      ${priorityHtml}
+      <h3>Resposta registrada. Sua devolutiva preliminar</h3>
+      <p>Perfil: <strong>${esc(schema[currentProfile].title)}</strong>${answers.municipality?' • Município: '+esc(answers.municipality):''}</p>
+      <p>${hasContact?(emailSent?'O serviço de e-mail aceitou o envio da confirmação; confira a caixa de entrada e o spam.':'Seu contato foi registrado; não foi possível confirmar o envio de e-mail agora.'): 'Sua resposta foi registrada sem dados de contato.'}</p>
+      <div class="consent-box" style="text-align:left;margin-top:18px"><strong>Questão indicada por você</strong><p>${esc(challenge)}</p></div>
+      <div class="consent-box" style="text-align:left;margin-top:18px"><strong>Conexão possível</strong><p>${esc(opportunity)}</p></div>
+      <div class="consent-box" style="text-align:left;margin-top:18px"><strong>Próximo passo sugerido</strong><p>${esc(nextStep)}</p></div>
       ${referralHtml}
 
       <div class="consent-box" style="text-align:left;margin-top:18px">
-        <strong>O diagnóstico é um ponto de partida.</strong>
-        <p>Quando houver aderência, o Conexão Circular poderá transformar a oportunidade identificada em uma conexão possível: quem pode ajudar, qual ação pode ser testada e qual indicador pode acompanhar a evolução.</p>
+        <strong>Leitura inicial, sem validação independente.</strong>
+        <p>Esta devolutiva usa suas respostas declaradas; não representa certificação, auditoria, indicador de impacto comprovado ou compromisso de conexão futura.</p>
       </div>
+
+      <div class="consent-box" style="text-align:left;margin-top:18px"><strong>Continue na comunidade</strong><p>Se desejar acompanhar resultados e oportunidades, você pode solicitar entrada na comunidade Conexão Circular.</p><a class="primary" href="${community}" target="_blank" rel="noopener noreferrer" style="text-decoration:none">Conhecer a comunidade</a></div>
 
       <div class="consent-box" style="text-align:left;margin-top:18px">
         <strong>Ajude a ampliar esta escuta.</strong>
