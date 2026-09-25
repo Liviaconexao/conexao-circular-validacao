@@ -113,7 +113,8 @@ async function goNext(){
 
     if(currentIndex<total){
       if(!captureCurrent())return;
-      await api({action:'save',session_id:sessionId,answers});
+      const questionKey=schema[currentProfile].questions[currentIndex].key;
+      await api({action:'save',session_id:sessionId,answers:{[questionKey]:answers[questionKey]}});
       currentIndex++;
       if(currentIndex<total)renderQuestion();
       else renderContact();
